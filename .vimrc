@@ -8,7 +8,6 @@ set backspace=2		" more powerful backspacing
 set ai			" auto indenting
 set ruler		" show the cursor position
 set ignorecase		" ignore case when searching
-set incsearch "dynamicly highlighting while searching
 set smartcase
 set noerrorbells	" don't make noise!
 set wildmenu		" turn on command line completion wild style
