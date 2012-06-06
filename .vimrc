@@ -15,7 +15,7 @@ set wildmode=list:longest,full
 set number		" line numbers on
 set tabstop=2		" tab length 4 spaces
 set nowrap			" don't wrap lines
-"set expandtab		" use spaces, not tabs
+set expandtab		" use spaces, not tabs
 set shiftwidth=2	"shift/tab width
 set hlsearch	" highlight search items
 set scrolloff=3	" have 3 lines above/below cursor
