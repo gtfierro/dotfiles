@@ -46,4 +46,20 @@ function! StripWhitespace()
 		call setpos('.', save_cursor)
 		call setreg('/', old_query)
 endfunction
+
+"settings for Powerline
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+set fillchars+=stl:\ ,stlnc:\
+set encoding=utf-8
+
 noremap <leader>ss :call StripWhitespace()<CR>
+
+"hopefully this allows me to copy to system clipboard
+" ctrl-x for cut
+vmap <C-x> :!pbcopy<cr>
+" ctrl-c for copy
+vmap <C-c> :w !pbcopy<cr><cr>
+
+"setup pathogen
+call pathogen#infect()
