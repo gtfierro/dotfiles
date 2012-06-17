@@ -28,6 +28,8 @@ set directory=~/.vim/swaps
 set showmode "show current mode
 set showcmd "show partial command
 map <C-l> :TlistToggle
+map <C-n> :NERDtree
+map <C-m> :NERDtreeClose
 imap jj <Esc>
 syntax on		" syntax highlighting
 filetype plugin on	" use the file type plugings

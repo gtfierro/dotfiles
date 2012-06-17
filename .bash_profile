@@ -22,4 +22,6 @@ export EDITOR="/usr/local/bin/vim"
 [[ -s "/Users/gabe/.rvm/scripts/rvm" ]] && source "/Users/gabe/.rvm/scripts/rvm"
 export CC=/usr/bin/llvm-gcc-4.2
 complete -W "$(echo $(grep '^ssh ' ~/.bash_history | sort -u | sed 's/^ssh //'))" ssh
+alias ta="tmux attach-session -t"
+complete -W "$(echo $(tmux list-sessions | cut -d':' -f1))" ta
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
