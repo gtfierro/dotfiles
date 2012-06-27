@@ -25,3 +25,6 @@ complete -W "$(echo $(grep '^ssh ' ~/.bash_history | sort -u | sed 's/^ssh //'))
 alias ta="tmux attach-session -t"
 complete -W "$(echo $(tmux list-sessions | cut -d':' -f1))" ta
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+if [ -f /usr/local/etc/bash_completion.d ]; then
+  . /usr/local/etc/bash_completion.d
+fi

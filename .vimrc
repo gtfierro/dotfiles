@@ -28,8 +28,6 @@ set directory=~/.vim/swaps
 set showmode "show current mode
 set showcmd "show partial command
 map <C-l> :TlistToggle
-map <C-n> :NERDtree
-map <C-m> :NERDtreeClose
 imap jj <Esc>
 syntax on		" syntax highlighting
 filetype plugin on	" use the file type plugings
@@ -62,6 +60,10 @@ noremap <leader>ss :call StripWhitespace()<CR>
 vmap <C-x> :!pbcopy<cr>
 " ctrl-c for copy
 vmap <C-c> :w !pbcopy<cr><cr>
+"g:fakeclip_terminal_multiplexer_type='tmux'
+"ctl-o inserts newline w/o insert mode
+nmap <C-o> o<Esc>
+nmap <C-O> O<Esc>
 
 "setup pathogen
 call pathogen#infect()
