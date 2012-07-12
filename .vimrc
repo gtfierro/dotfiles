@@ -11,7 +11,7 @@ set ignorecase		" ignore case when searching
 set smartcase
 set noerrorbells	" don't make noise!
 set wildmenu		" turn on command line completion wild style
-set wildmode=list:longest,full 
+set wildmode=list:longest,full
 set number		" line numbers on
 set tabstop=2		" tab length 4 spaces
 set nowrap			" don't wrap lines
@@ -27,6 +27,19 @@ set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 set showmode "show current mode
 set showcmd "show partial command
+
+"for vim completion
+set complete=.,b,u,]
+set completeopt=menu,preview
+
+let mapleader = ","
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>s :Sscratch
+nnoremap <leader>q gqip
+nnoremap <leader>v V`]
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+nnoremap <leader>w :w !wc
+
 map <C-l> :TlistToggle
 imap jj <Esc>
 syntax on		" syntax highlighting
@@ -63,7 +76,10 @@ vmap <C-c> :w !pbcopy<cr><cr>
 "g:fakeclip_terminal_multiplexer_type='tmux'
 "ctl-o inserts newline w/o insert mode
 nmap <C-o> o<Esc>
-nmap <C-O> O<Esc>
+
+set t_Co=256
+set background=dark
+"colorscheme solarized
 
 "setup pathogen
 call pathogen#infect()

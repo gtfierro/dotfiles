@@ -11,8 +11,10 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+alias tmux="tmux -2"
+function pipu() { "for i in $(pip freeze) ; do sudo pip install --upgrade $(echo $i | cut -d'=' -f1) ; done" ;}
 function lt() { mkdir ~/notes/"$@" ; mate ~/notes/"$@"/"$@".tex ;}
-PS1="\e[1;32m\t\e[m [\e[0;34m\u:\e[m \e[2;30m\w\e[m ]\n-> "
+PS1="\e[1;32m\t\e[m [\e[0;34m\u:\e[m \e[2;36m\w\e[m ]\n-> "
 export PATH="/usr/local/bin:${PATH}"
 export PATH="/usr/local/sbin:${PATH}"
 export PATH="/usr/local/share/python:${PATH}"
@@ -22,7 +24,7 @@ export EDITOR="/usr/local/bin/vim"
 [[ -s "/Users/gabe/.rvm/scripts/rvm" ]] && source "/Users/gabe/.rvm/scripts/rvm"
 export CC=/usr/bin/llvm-gcc-4.2
 complete -W "$(echo $(grep '^ssh ' ~/.bash_history | sort -u | sed 's/^ssh //'))" ssh
-alias ta="tmux attach-session -t"
+alias ta="tmux -2 attach-session -t"
 complete -W "$(echo $(tmux list-sessions | cut -d':' -f1))" ta
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 if [ -f /usr/local/etc/bash_completion.d ]; then
