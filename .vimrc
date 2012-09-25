@@ -13,7 +13,7 @@ set noerrorbells	" don't make noise!
 set wildmenu		" turn on command line completion wild style
 set wildmode=list:longest,full
 set number		" line numbers on
-set tabstop=2		" tab length 4 spaces
+set tabstop=4		" tab length 4 spaces
 set nowrap			" don't wrap lines
 set expandtab		" use spaces, not tabs
 set shiftwidth=2	"shift/tab width
@@ -39,9 +39,11 @@ nnoremap <leader>q gqip
 nnoremap <leader>v V`]
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>w :w !wc
+noremap <leader>ss :call StripWhitespace()<CR>
+noremap <leader>l :TlistToggle
 
-map <C-l> :TlistToggle
 imap jj <Esc>
+imap JJ <Esc>
 syntax on		" syntax highlighting
 filetype plugin on	" use the file type plugings
 set grepprg=grep\ -nH\ $* "grep generates file-name
@@ -66,7 +68,6 @@ set laststatus=2
 set fillchars+=stl:\ ,stlnc:\
 set encoding=utf-8
 
-noremap <leader>ss :call StripWhitespace()<CR>
 
 "hopefully this allows me to copy to system clipboard
 " ctrl-x for cut
