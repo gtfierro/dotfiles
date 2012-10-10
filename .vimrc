@@ -38,9 +38,10 @@ nnoremap <leader>s :Sscratch
 nnoremap <leader>q gqip
 nnoremap <leader>v V`]
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
-nnoremap <leader>w :w !wc
+nnoremap <leader>w :w !wc<CR>
+nnoremap <leader>h :noh<CR>
 noremap <leader>ss :call StripWhitespace()<CR>
-noremap <leader>l :TlistToggle
+noremap <leader>l :TlistToggle<CR>
 
 imap jj <Esc>
 imap JJ <Esc>
