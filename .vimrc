@@ -45,6 +45,8 @@ noremap <leader>l :TlistToggle<CR>
 
 imap jj <Esc>
 imap JJ <Esc>
+imap jJ <Esc>
+imap Jj <Esc>
 syntax on		" syntax highlighting
 filetype plugin on	" use the file type plugings
 set grepprg=grep\ -nH\ $* "grep generates file-name
