@@ -1,4 +1,8 @@
 *
+*.swo
+*.swn
+*.swp
+*.netrwhist
 !.gitignore
 !.tmux.conf
 !.osx
@@ -7,3 +11,4 @@
 !.bash_profile
 !.inputrc
 !README.md
+
