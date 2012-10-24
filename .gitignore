@@ -1,0 +1,9 @@
+*
+!.gitignore
+!.tmux.conf
+!.osx
+!.vim/*
+!.vimrc
+!.bash_profile
+!.inputrc
+!README.md
