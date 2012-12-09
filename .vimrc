@@ -71,6 +71,12 @@ set laststatus=2
 set fillchars+=stl:\ ,stlnc:\
 set encoding=utf-8
 
+" Yank text to the OS X clipboard
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 "hopefully this allows me to copy to system clipboard
 " ctrl-x for cut
@@ -83,7 +89,8 @@ nmap <C-o> o<Esc>
 
 set t_Co=256
 set background=dark
-"colorscheme solarized
+colorscheme solarized
+let g:solarized_termcolors=1
 
 "setup pathogen
 call pathogen#infect()

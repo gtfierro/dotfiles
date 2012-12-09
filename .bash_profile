@@ -35,4 +35,4 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
-PS1="\e[1;32m\t\e[m [\e[0;34m\u:\e[m \e[2;36m\w\e[m ]$(__git_ps1)\[\033[00m\]\n-> "
+PS1="\e[1;32m\t\e[m [\e[0;34m\u:\e[m \e[2;36m\w\e[m ]$(__git_ps1 "(%s)")\[\033[00m\]\n-> "
