@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/gabe/Projects/hubot/gabebot/node_modules/hubot-gtalk'
-let g:netrw_dirhist_2='/Users/gabe/Projects/hubot/gabebot'
-let g:netrw_dirhist_3='/Users/gabe/.vim'
-let g:netrw_dirhist_4='/Users/gabe/Documents/LoCal/BACnet/bacnet-stack-0.6.0'
-let g:netrw_dirhist_5='/Users/gabe/Documents/journal/source/notes/type-inference'
-let g:netrw_dirhist_6='/Users/gabe/.tmux'
