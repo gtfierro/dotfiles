@@ -1,0 +1,15 @@
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	st = status .
+	d = difftool
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[push]
+	default = matching
+[color]
+	ui = true
