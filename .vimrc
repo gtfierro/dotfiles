@@ -34,7 +34,7 @@ set completeopt=menu,preview
 
 let mapleader = ","
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-nnoremap <leader>s :Sscratch
+nnoremap <leader>s :%!python -m json.tool<CR>
 nnoremap <leader>q gqip
 nnoremap <leader>v V`]
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
