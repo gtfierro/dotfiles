@@ -5,6 +5,7 @@ set term=screen-256color
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
 set backspace=2		" more powerful backspacing
+set hidden
 set ai			" auto indenting
 set ruler		" show the cursor position
 set ignorecase		" ignore case when searching
@@ -49,13 +50,20 @@ imap jJ <Esc>
 imap Jj <Esc>
 syntax on		" syntax highlighting
 filetype plugin on	" use the file type plugings
+set omnifunc=syntaxcomplete#Complete
+" close omnifunc window automatically
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 set grepprg=grep\ -nH\ $* "grep generates file-name
-filetype indent on
 let g:tex_flavor='latex'
+
 " Don't write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup
+
 " Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup
+
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
  	let save_cursor = getpos(".")
@@ -83,7 +91,8 @@ noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 vmap <C-x> :!pbcopy<cr>
 " ctrl-c for copy
 vmap <C-c> :w !pbcopy<cr><cr>
-"g:fakeclip_terminal_multiplexer_type='tmux'
+
+"
 "ctl-o inserts newline w/o insert mode
 nmap <C-o> o<Esc>
 

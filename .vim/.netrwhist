@@ -1,2 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/gabe/src/KMEG/tinyos-main/apps/UDPEcho_TH_CO2'
+let g:netrw_dirhist_2='/Users/gabe/src/giles/src/archiver'
+let g:netrw_dirhist_3='/Users/gabe/src/OpenBAS/openbas'
